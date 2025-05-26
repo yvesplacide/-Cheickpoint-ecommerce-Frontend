@@ -41,7 +41,7 @@ const OrderDetailsPage = () => {
 
       // Créer d'abord le paiement
       const { data: paymentData } = await axios.post(
-        "http://localhost:5000/api/payments",
+        `${import.meta.env.VITE_API_URL}/api/payments`,
         {
           orderId: order._id,
           amount: order.totalPrice,
